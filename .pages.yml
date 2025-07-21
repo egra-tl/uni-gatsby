@@ -1,0 +1,32 @@
+# config.yml - Basic Pages CMS configuration
+site:
+  title: "My Awesome Site"
+  description: "A site built with Pages CMS"
+  base_url: "https://example.com"
+  author: "Your Name"
+
+content:
+  paths:
+    pages: "content/pages"
+    posts: "content/posts"
+    data: "content/data"
+  
+  defaults:
+    layout: "default"
+    template: "page.html"
+    permalink: "/:slug/"
+  
+  markdown:
+    extensions:
+      - tables
+      - fenced_code
+      - footnotes
+    settings:
+      smartypants: true
+
+collections:
+  posts:
+    output: true
+    sort_by: "date"
+    sort_direction: "desc"
+    permalink: "/blog/:slug/"
